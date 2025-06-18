@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     
       <header className="text-gray-600 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
           <Image
             src="/assets/picture/portfolio_logo.png"
             alt="Logo"

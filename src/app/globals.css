@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+
+.custom-image{
+  background-image: url('/assets/picture/bg-portfolio.png');
+  background-size: cover;
+}
