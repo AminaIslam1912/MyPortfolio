@@ -1,6 +1,3 @@
-import Reat from 'react';
-
-import Image from 'next/image';
 import { FaCheck } from "react-icons/fa";
 
 const Skill = () => {
