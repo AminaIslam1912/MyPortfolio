@@ -25,8 +25,8 @@ const Hero = () => {
 />
       </h1>
       <div className="w-[100px] h-[2px] bg-indigo-900"></div>
-      <p className="mb-8 leading-relaxed">
-        I’m Amina Islam, a Computer Science and Engineering student at the University of Dhaka, with a passion for web and Android development. Proficient in Python, C++, Flutter, Java, JavaScript, React, Next.js, HTML, CSS, and Tailwind CSS, I’ve developed impactful projects like LearnLoop, a skill-sharing Android app built with Flutter, a Hotel Management System in Java, and Cosmo Shooter, a game developed using C-SDL. I thrive on crafting user-centric solutions that address real-world problems. When I'm not coding, I explore new tech trends and collaborate with peers. I’m eager to build innovative applications and contribute to the tech community.
+      <p className="mb-8 leading-relaxed">I&apos;m
+         Amina Islam, a Computer Science and Engineering student at the University of Dhaka, with a passion for web and Android development. Proficient in Python, C++, Flutter, Java, JavaScript, React, Next.js, HTML, CSS, and Tailwind CSS, I’ve developed impactful projects like LearnLoop, a skill-sharing Android app built with Flutter, a Hotel Management System in Java, and Cosmo Shooter, a game developed using C-SDL. I thrive on crafting user-centric solutions that address real-world problems. When I&apos;m not coding, I explore new tech trends and collaborate with peers. I&apos;m eager to build innovative applications and contribute to the tech community.
       </p>
       <div className="flex justify-center">
         <Link href="#contact">
