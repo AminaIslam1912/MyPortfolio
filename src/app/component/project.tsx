@@ -3,12 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import {
-  FaGithub,
-  FaPlayCircle,
-  FaCode,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { FaGithub, FaPlayCircle } from "react-icons/fa";
 
 const projects = [
   {
