@@ -5,48 +5,56 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
-
-
 const Footer = () => {
   return (
-    <div className="bg-[#ffd99f]">
-      <footer className="text-indigo-600 body-font">
-  <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-     <Image
-                 src="/assets/picture/portfolio_logo.png"
-                 alt="Logo"
-                 width={30}
-                 height={30}
-                 className="rounded-full mr-3"
-     
-               />
-      <span className="ml-3 text-xl">Amina Islam</span>
-    </a>
-    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-      © 2025 Amina Islam
-     
-    </p>
-    <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-5">
-      <Link href={"https://www.facebook.com/amina.islam.jenny"} target="_blank" className="text-blue-900  ml-3 ">
-       
-        <FaFacebook className="text-3xl text-blue-700  hover:text-blue-500" />
-      </Link>
-      
-      <Link href={"https://www.instagram.com/amina.islamj?igsh=MTBkYmQ2YnlvMzNjaA=="} target="_blank" className="ml-3  ">
-        <FaInstagram className="text-3xl text-pink-700 hover:text-pink-400" />
+    <div className="bg-card border-t border-border">
+      <footer className="body-font">
+        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a className="flex title-font font-medium items-center md:justify-start justify-center text-foreground">
+            <Image
+              src="/assets/picture/portfolio_logo.png"
+              alt="Logo"
+              width={30}
+              height={30}
+              className="rounded-full mr-3"
+            />
+            <span className="ml-3 text-xl font-semibold">Amina Islam</span>
+          </a>
+          <p className="text-sm text-muted-foreground sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-border sm:py-2 sm:mt-0 mt-4">
+            © 2025 Amina Islam. All rights reserved.
+          </p>
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4">
+            <Link
+              href={"https://www.facebook.com/amina.islam.jenny"}
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <FaFacebook className="text-2xl" />
+            </Link>
 
-      </Link>
-      <Link href={"https://www.linkedin.com/in/amina-islam-3b019a27b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsaaNNHZ3SmmdyhQ1p%2F7fVQ%3D%3D"} target="_blank" className="ml-3  mr-5 ">
+            <Link
+              href={
+                "https://www.instagram.com/amina.islamj?igsh=MTBkYmQ2YnlvMzNjaA=="
+              }
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <FaInstagram className="text-2xl" />
+            </Link>
 
-      <FaLinkedin className="text-3xl text-blue-900 hover:text-blue-500" />
-
-      </Link>
-    </span>
-  </div>
-</footer>
-</div>
-      
+            <Link
+              href={
+                "https://www.linkedin.com/in/amina-islam-3b019a27b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsaaNNHZ3SmmdyhQ1p%2F7fVQ%3D%3D"
+              }
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <FaLinkedin className="text-2xl" />
+            </Link>
+          </span>
+        </div>
+      </footer>
+    </div>
   );
 };
 

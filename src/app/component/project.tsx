@@ -1,155 +1,153 @@
-import Link from "next/dist/client/link";
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import {
+  FaGithub,
+  FaPlayCircle,
+  FaCode,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
+
+const projects = [
+  {
+    title: "Hotel Management System",
+    category: "Java Desktop Application",
+    description:
+      "A comprehensive Java-based application developed using Object-Oriented Programming principles to streamline hotel operations. Features include room booking, guest management, check-in/check-out, and room inventory control.",
+    image: "/assets/project/project-pic-hms.png",
+    technologies: ["Java", "Java Swing", "MySQL", "OOP"],
+    videoLink:
+      "https://drive.google.com/file/d/1fWMEJN6H49mIlJFoVi9YstGGuwMEPjpT/view?usp=sharing",
+    codeLink: "https://github.com/AminaIslam1912/HotelManagementSystem",
+    emoji: "🏨",
+  },
+  {
+    title: "LearnLoop",
+    category: "Android Mobile App",
+    description:
+      "A peer-to-peer skill-sharing platform that makes education accessible and engaging. Features include one-to-one skill swaps, free courses, progress tracking, real-time chat, community forum, and gamified challenges.",
+    image: "/assets/project/project-pic-learnloop.jpg",
+    technologies: ["Flutter", "Firebase", "Supabase", "PostgreSQL"],
+    videoLink:
+      "https://drive.google.com/file/d/1YydCDekDBhEHkHPqtTMFlpGUagg4nywZ/view?usp=sharing",
+    codeLink: "https://github.com/AminaIslam1912/learnloop/tree/main/learnloop",
+    emoji: "📚",
+  },
+  {
+    title: "World Time App",
+    category: "Android Mobile App",
+    description:
+      "A Flutter-based application designed to display real-time clocks for global time zones. Features customizable city time displays, time zone conversions, and a sleek, user-friendly interface.",
+    image: "/assets/project/project-pic-time.jpg",
+    technologies: ["Flutter", "Dart", "World Time API"],
+    videoLink: null,
+    codeLink: "https://github.com/AminaIslam1912/world_time",
+    emoji: "🌍",
+  },
+];
 
 const Project = () => {
   return (
-    <div id="project">
-      <section className="text-gray-600 body-font bg-[#fae3c9]">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              My Projects
-            </h1>
-            {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-        gentrify, subway tile poke farm-to-table. Franzen you probably haven't
-        heard of them man bun deep jianbing selfies heirloom.
-      </p> */}
-          </div>
-          <div className="flex flex-wrap m-5 -mt-[5rem]">
-            {/* project */}
-            <div className="lg:w-1/3 sm:w-1/2 p-4 cursor-pointer">
-              <div className="flex relative">
-                <Image
-                  alt="gallery"
-                  fill
-                  className="absolute inset-0 w-full h-full object-cover object-center "
-                  src="/assets/project/project-pic-hms.png"
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-black-200 bg-[#f7e8d7] opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                    JAVA Project
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-black mb-3">
-                   🏨 Hotel Management System 
-                  </h1>
-                  <p className="leading-relaxed line-clamp-3 text-black-900">
-                    A Java-based application developed using Object-Oriented
-                    Programming (OOP) principles to streamline hotel operations.
-                    I built features like room booking, guest management,
-                    check-in/check-out, and room inventory control. Powered by
-                    Java, Java Swing for the GUI, and MySQL for data management,
-                    this project showcases efficient, user-friendly design.
-                  </p>
-                  <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-4 mt-6">
-                    <Link
-                      href="https://drive.google.com/file/d/1fWMEJN6H49mIlJFoVi9YstGGuwMEPjpT/view?usp=sharing"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-2 mt-6">
-                        View Video
-                      </button>
-                    </Link>
+    <section
+      id="project"
+      className="bg-secondary py-20 relative overflow-hidden"
+    >
+      {/* Decorative background */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute top-40 right-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
+      </div>
 
-                    <Link
-                      href="https://github.com/AminaIslam1912/HotelManagementSystem"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-4 mt-6">
-                        View Code
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:w-1/3 sm:w-1/2 p-4 cursor-pointer">
-              <div className="flex relative">
-                <Image
-                  alt="gallery"
-                  fill
-                  className="absolute inset-0 w-full h-full object-cover object-center "
-                  src="/assets/project/project-pic-learnloop.jpg"
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-black-200 bg-[#f7e8d7] opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                    Android Project
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-black mb-3">
-                    📚 LearnLoop
-                  </h1>
-                  <p className="leading-relaxed line-clamp-3 text-black-900">
-                    LearnLoop is a peer-to-peer skill-sharing platform I developed to make education accessible and engaging. I built features like one-to-one skill swaps, free courses, progress tracking, real-time chat with Google Meet, a community forum, gamified challenges, bookmarking, and secure authentication. Using Flutter, Cloud Firestore, Postgres, Supabase, Firebase, Figma, and Canva, I created an interactive learning experience
-                  </p>
-                  <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-4 mt-6">
-                    <Link
-                      href="https://drive.google.com/file/d/1YydCDekDBhEHkHPqtTMFlpGUagg4nywZ/view?usp=sharing"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-2  mt-6">
-                        View Video
-                      </button>
-                    </Link>
-
-                    <Link
-                      href="https://github.com/AminaIslam1912/learnloop/tree/main/learnloop"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-4 mt-6">
-                        View Code
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:w-1/3 sm:w-1/2 p-4 cursor-pointer">
-              <div className="flex relative">
-                <Image
-                  alt="gallery"
-                  fill
-                  className="absolute inset-0 w-full h-full object-cover object-center "
-                  src="/assets/project/project-pic-time.jpg"
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-black-200 bg-[#f7e8d7] opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                    Android Project
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-black mb-3">
-                    World Time App 🌍
-                  </h1>
-                  <p className="leading-relaxed line-clamp-3 text-black-900">
-                   A Flutter-based Android application designed to display real-time clocks for global time zones. I built features like customizable city time displays, time zone conversions, and a sleek, user-friendly interface. 
-                  </p>
-                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-4 mt-6">
-                    {/* <Link
-                      href="https://drive.google.com/file/d/1fWMEJN6H49mIlJFoVi9YstGGuwMEPjpT/view?usp=sharing"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-10 mt-6">
-                        View Video
-                      </button>
-                    </Link> */}
-
-                    <Link
-                      href="https://github.com/AminaIslam1912/world_time"
-                      target="_blank"
-                    >
-                      <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg px-auto ml-1 mt-6">
-                        View Code
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="container px-5 py-24 mx-auto relative z-10">
+        {/* Header */}
+        <div className="flex flex-col text-center w-full mb-16">
+          <h2 className="text-sm text-primary tracking-widest font-bold mb-3 uppercase animate-pulse">
+            Portfolio
+          </h2>
+          <h1 className="sm:text-5xl text-4xl font-extrabold title-font mb-4 text-foreground">
+            Featured Projects
+          </h1>
+          <div className="w-[100px] h-[4px] bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
+            Showcasing my journey in building innovative solutions
+          </p>
         </div>
-      </section>
-    </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-primary/50"
+            >
+              {/* Project Image */}
+              <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
+                <Image
+                  alt={project.title}
+                  fill
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                  src={project.image}
+                />
+                {/* Overlay gradient (reduced for clarity) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent opacity-50" />
+              </div>
+
+              {/* Project Content */}
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {project.emoji} {project.title}
+                </h3>
+                {/* Prominent Category Label */}
+                <div className="mb-4">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs sm:text-sm font-semibold shadow-sm ring-1 ring-primary/30">
+                    {project.category}
+                  </span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-secondary text-foreground text-xs rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  {project.videoLink && (
+                    <Link
+                      href={project.videoLink}
+                      target="_blank"
+                      className="flex-1"
+                    >
+                      <button className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground py-2.5 px-4 rounded-lg font-medium hover:opacity-90 transition-all shadow-md hover:shadow-lg">
+                        <FaPlayCircle className="text-lg" />
+                        Demo
+                      </button>
+                    </Link>
+                  )}
+                  <Link
+                    href={project.codeLink}
+                    target="_blank"
+                    className={project.videoLink ? "flex-1" : "w-full"}
+                  >
+                    <button className="w-full inline-flex items-center justify-center gap-2 bg-secondary text-foreground border border-border py-2.5 px-4 rounded-lg font-medium hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all">
+                      <FaGithub className="text-lg" />
+                      Code
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="absolute inset-0 border-2 border-primary rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

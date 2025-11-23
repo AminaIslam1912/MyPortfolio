@@ -1,7 +1,87 @@
 @import "tailwindcss";
 
+/* Professional Color Scheme */
+:root {
+  /* Light Theme - Professional Blues & Neutrals */
+  --background: 249 250 251;
+  --foreground: 17 24 39;
+  --card: 255 255 255;
+  --card-foreground: 17 24 39;
+  --primary: 59 130 246;
+  --primary-foreground: 255 255 255;
+  --secondary: 243 244 246;
+  --secondary-foreground: 17 24 39;
+  --accent: 99 102 241;
+  --accent-foreground: 255 255 255;
+  --muted: 243 244 246;
+  --muted-foreground: 107 114 128;
+  --border: 229 231 235;
+  --input: 229 231 235;
+  --ring: 59 130 246;
+}
 
-.custom-image{
-  background-image: url('/assets/picture/bg-portfolio.png');
+.dark {
+  /* Dark Theme - Professional Dark Mode */
+  --background: 17 24 39;
+  --foreground: 249 250 251;
+  --card: 31 41 55;
+  --card-foreground: 249 250 251;
+  --primary: 96 165 250;
+  --primary-foreground: 17 24 39;
+  --secondary: 55 65 81;
+  --secondary-foreground: 249 250 251;
+  --accent: 129 140 248;
+  --accent-foreground: 17 24 39;
+  --muted: 55 65 81;
+  --muted-foreground: 156 163 175;
+  --border: 55 65 81;
+  --input: 55 65 81;
+  --ring: 96 165 250;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+.custom-image {
+  background-image: url("/assets/picture/bg-portfolio.png");
   background-size: cover;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Skill progress bar animation */
+@keyframes slideIn {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--final-width);
+  }
+}
+
+/* Generic fade-in animation for mobile menus & sections */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out;
 }
